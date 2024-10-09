@@ -21,9 +21,16 @@ export class CatalogService{
         return data;
     }
 
-    getProducts(limit:number,offset:number){}
+    async getProducts(limit: number, offset: number) {
+        return await this._repository.find(limit, offset);
+    }
 
-    getProduct(id:number){}
+    async getProduct(id: number) {
+        return await this._repository.findOne(id);
+    }
 
-    deleteProduct(id:number){}
+    async deleteProduct(id: number) {
+        return true;
+        // return await this._repository.delete(id);
+    }
 }
