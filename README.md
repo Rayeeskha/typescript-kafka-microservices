@@ -8,6 +8,6 @@ This repository is part of the Node.js Microservice project using Kafka and Elas
     Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase
     Use npm test to check the test cases.
     
-# Typescript kafka microservices Run test cases
+# Run test case
 npm test
 
