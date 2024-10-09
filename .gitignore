@@ -1,0 +1,19 @@
+# Ignore coverage reports
+catalog_service/coverage/
+
+# Ignore build artifacts
+catalog_service/dist/
+
+# Ignore node modules
+catalog_service/node_modules/
+
+# Optional: Ignore logs
+catalog_service/logs/
+*.log
+
+# Optional: Ignore environment variables
+catalog_service/.env
+
+# Optional: Ignore temporary files
+*.tmp
+*.temp
