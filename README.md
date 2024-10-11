@@ -11,3 +11,6 @@ This repository is part of the Node.js Microservice project using Kafka and Elas
 # Run test case
 npm test
 
+# catalog test check
+npm test catalog_service/src/api/__test__/catalog.routes.test.ts
+
