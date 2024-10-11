@@ -99,10 +99,21 @@ describe("catalogService", () => {
       const randomLimit = faker.number.int({ min: 10, max: 50 });
       const products = ProductFactory.buildList(randomLimit);
       jest.spyOn(repository, "find").mockImplementationOnce(() => Promise.resolve(products));
-
       const result = await service.getProducts(randomLimit, 0);
       expect(result.length).toEqual(randomLimit);
       expect(result).toMatchObject(products);
+    });
+  });
+
+  describe("deleteProduct", () => {
+    test("should delete product by id", async () => {
+      const service = new CatalogService(repository);
+      const product = ProductFactory.build();
+      jest.spyOn(repository, "delete").mockImplementationOnce(() => Promise.resolve({ id: product.id }));
+      const result = await service.deleteProduct(product.id!);
+      expect(result).toMatchObject({
+        id: product.id,
+      });
     });
   });
 
